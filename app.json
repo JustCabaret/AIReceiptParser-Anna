@@ -1,6 +1,7 @@
 {
   "name": "Receipt Expense Copilot",
   "slug": "receipt-expense-copilot",
+  "version": "0.1.4",
   "category": "productivity",
   "tagline": "Automated privacy-first receipt scanner and expense manager",
   "description": "Receipt Expense Copilot automates structured data extraction from receipt photos. It performs local OCR text extraction, utilizes the host LLM to parse text into line items, allows human validation and correction, and persists data to a local SQLite database with CSV export capabilities.",

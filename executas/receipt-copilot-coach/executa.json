@@ -1,7 +1,8 @@
 {
   "slug": "receipt-copilot-coach",
   "name": "Receipt Copilot Coach",
-  "version": "0.1.0",
+  "description": "Interactive coach skill to help users query their receipt expense database",
+  "version": "0.1.4",
   "executa_type": "skill",
   "tool_id": "receipt-copilot-coach",
   "type": "python"

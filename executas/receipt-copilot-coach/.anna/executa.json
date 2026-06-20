@@ -1,0 +1,9 @@
+{
+  "$schema": "anna-executa-identity/v1",
+  "host": "https://anna.partners",
+  "executa_id": 1048,
+  "tool_id": "skill-cabaret-receipt-copilot-coach-dkyyvtc3",
+  "slug": "receipt-copilot-coach",
+  "executa_type": "skill",
+  "first_published_at": "2026-06-20T19:03:42.332Z"
+}

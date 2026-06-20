@@ -5,7 +5,12 @@
     "receipt-parser-tool": {
       "tool_id": "tool-cabaret-receipt-parser-tool-gf7a7e8f",
       "path": "./executas/receipt-parser-tool",
-      "source": "working"
+      "source": "published"
+    },
+    "receipt-copilot-coach": {
+      "tool_id": "skill-cabaret-receipt-copilot-coach-dkyyvtc3",
+      "path": "./executas/receipt-copilot-coach",
+      "source": "published"
     }
   }
 }

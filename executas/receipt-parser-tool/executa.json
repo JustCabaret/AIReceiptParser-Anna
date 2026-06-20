@@ -1,7 +1,7 @@
 {
   "slug": "receipt-parser-tool",
   "name": "Receipt Parser Tool",
-  "version": "0.1.0",
+  "version": "0.1.4",
   "executa_type": "tool",
   "tool_id": "tool-dev-receipt-parser",
   "type": "python",

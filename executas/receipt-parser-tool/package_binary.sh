@@ -66,19 +66,32 @@ case "$ARCH" in
     ;;
 esac
 
+case "$OS" in
+  msys*|mingw*|cygwin*|windows*)
+    OS="windows"
+    ;;
+esac
+
 case "$OS-$ARCH" in
   darwin-arm64)
     PLATFORM="darwin-arm64"
+    SUFFIX=""
     ;;
   darwin-x86_64)
     PLATFORM="darwin-x86_64"
+    SUFFIX=""
     ;;
   linux-x86_64)
     PLATFORM="linux-x86_64"
+    SUFFIX=""
+    ;;
+  windows-x86_64)
+    PLATFORM="windows-x86_64"
+    SUFFIX=".exe"
     ;;
   *)
     echo "ERROR: unsupported platform: $OS-$ARCH" >&2
-    echo "This script currently targets: darwin-arm64, darwin-x86_64, linux-x86_64" >&2
+    echo "This script currently targets: darwin-arm64, darwin-x86_64, linux-x86_64, windows-x86_64" >&2
     exit 1
     ;;
 esac
@@ -100,7 +113,7 @@ uv run --with pyinstaller python -m PyInstaller \
   --name "$TOOL_ID" \
   "$ENTRY_FILE"
 
-BINARY="dist/$TOOL_ID"
+BINARY="dist/${TOOL_ID}${SUFFIX}"
 
 if [ ! -f "$BINARY" ]; then
   echo "ERROR: PyInstaller did not produce $BINARY" >&2
@@ -112,12 +125,12 @@ if [ "$(uname -s)" = "Darwin" ]; then
 fi
 
 STAGE="$OUT_DIR/staging-$PLATFORM"
-cp "$BINARY" "$STAGE/bin/$TOOL_ID"
-chmod 0755 "$STAGE/bin/$TOOL_ID"
+cp "$BINARY" "$STAGE/bin/${TOOL_ID}${SUFFIX}"
+chmod 0755 "$STAGE/bin/${TOOL_ID}${SUFFIX}"
 
 echo "==> Writing archive manifest"
 
-python3 - "$STAGE/manifest.json" "$TOOL_ID" "$VERSION" "$DISPLAY_NAME" "$DESCRIPTION" <<'PY'
+python3 - "$STAGE/manifest.json" "$TOOL_ID" "$VERSION" "$DISPLAY_NAME" "$DESCRIPTION" "$SUFFIX" <<'PY'
 import json
 import sys
 from pathlib import Path
@@ -127,8 +140,9 @@ tool_id = sys.argv[2]
 version = sys.argv[3]
 display_name = sys.argv[4]
 description = sys.argv[5]
+suffix = sys.argv[6]
 
-entrypoint = f"bin/{tool_id}"
+entrypoint = f"bin/{tool_id}{suffix}"
 
 manifest = {
     "name": tool_id,
