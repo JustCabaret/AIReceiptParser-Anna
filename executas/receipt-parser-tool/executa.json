@@ -1,0 +1,13 @@
+{
+  "slug": "receipt-parser-tool",
+  "name": "Receipt Parser Tool",
+  "version": "0.1.0",
+  "executa_type": "tool",
+  "tool_id": "tool-dev-receipt-parser",
+  "type": "python",
+  "command": [
+    "uv",
+    "run",
+    "receipt_parser_plugin.py"
+  ]
+}

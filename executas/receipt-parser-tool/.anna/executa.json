@@ -1,0 +1,9 @@
+{
+  "$schema": "anna-executa-identity/v1",
+  "host": "https://anna.partners",
+  "executa_id": 1011,
+  "tool_id": "tool-cabaret-receipt-parser-tool-gf7a7e8f",
+  "slug": "receipt-parser-tool",
+  "executa_type": "tool",
+  "first_published_at": "2026-06-18T19:30:08.643Z"
+}

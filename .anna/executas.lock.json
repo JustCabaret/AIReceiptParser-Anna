@@ -1,0 +1,11 @@
+{
+  "$schema": "anna-executas-lock/v1",
+  "host": "https://anna.partners",
+  "executas": {
+    "receipt-parser-tool": {
+      "tool_id": "tool-cabaret-receipt-parser-tool-gf7a7e8f",
+      "path": "./executas/receipt-parser-tool",
+      "source": "working"
+    }
+  }
+}

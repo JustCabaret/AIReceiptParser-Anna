@@ -1,0 +1,8 @@
+{
+  "slug": "receipt-copilot-coach",
+  "name": "Receipt Copilot Coach",
+  "version": "0.1.0",
+  "executa_type": "skill",
+  "tool_id": "receipt-copilot-coach",
+  "type": "python"
+}

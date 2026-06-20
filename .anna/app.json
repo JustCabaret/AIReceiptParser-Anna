@@ -1,0 +1,8 @@
+{
+  "$schema": "anna-app-identity/v1",
+  "host": "https://anna.partners",
+  "app_id": 56,
+  "slug": "receipt-expense-copilot",
+  "handle": "Cabaret",
+  "first_published_at": "2026-06-18T19:29:09.304Z"
+}

@@ -1,0 +1,17 @@
+[project]
+name = "receipt-parser-tool"
+version = "0.2.0"
+description = "Local OCR, SQLite database, validation, and analytics exports for the Receipt Expense Copilot"
+requires-python = ">=3.9"
+dependencies = [
+    "pytesseract>=0.3.10",
+    "opencv-python>=4.9.0.80",
+    "openpyxl>=3.1.2",
+    "reportlab>=4.1.0",
+    "pillow",
+    "requests",
+    "easyocr>=1.7.1",
+]
+
+[project.scripts]
+tool-dev-receipt-parser = "receipt_parser_plugin:main"
