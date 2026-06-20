@@ -10,7 +10,7 @@ dependencies = [
     "reportlab>=4.1.0",
     "pillow",
     "requests",
-    "easyocr>=1.7.1",
+    "easyocr>=1.7.1; sys_platform != 'darwin' or platform_machine != 'x86_64'",
 ]
 
 [project.scripts]
